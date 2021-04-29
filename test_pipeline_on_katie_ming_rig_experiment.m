@@ -1,9 +1,10 @@
-experiment_name = 'emptysplit_20xUAS-ChrimsonRmVenusattp18_flyBowlMing_nopause_lengthofpersis_2min_10int_20191218T093239_2' ;
-reset_test_experiment_folder(experiment_name);
+experiment_relative_path = 'FlyBowlOpto/SS36564_20XUAS_CsChrimson_mVenus_attP18_flyBowlMing_20200227_Continuous_2min_5int_20200107_20200229T132141' ;
 
+[~, experiment_name] = fileparts2(experiment_relative_path) ;
+working_copy_example_experiment_folder_path = reset_goldblum_example_experiments_working_copy_folder() ;
+experiment_folder_path = fullfile(working_copy_example_experiment_folder_path, experiment_relative_path) ;
 this_script_file_path = mfilename('fullpath') ;
 this_script_folder_path = fileparts(this_script_file_path) ;
-experiment_folder_path = fullfile(this_script_folder_path, 'analysis-test-folder', experiment_name) ;
 settings_folder_path = fullfile(this_script_folder_path, 'settings') ;
 
 % Read the experiment metadata to determine the analysis_protoocol
